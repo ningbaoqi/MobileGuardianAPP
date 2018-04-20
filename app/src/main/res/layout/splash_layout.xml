@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/logo2"
+    android:id="@+id/splash_root"
+    >
+    <TextView
+        android:id="@+id/splash_app_version"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:shadowColor="@color/green"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:textSize="@dimen/splash_app_version_size"
+        />
+    <ProgressBar
+        android:id="@+id/splash_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+    <TextView
+        android:id="@+id/load_progress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+        android:text="@string/load_progress"
+        android:layout_marginLeft="@dimen/splash_margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/splash_load_progress"
+        android:visibility="gone"
+        />
+</RelativeLayout>

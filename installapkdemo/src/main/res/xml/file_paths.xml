@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--编写该Provider对外提供文件的目录
+内部的element可以是
+            files-path    ===========  Context.getFilesDir()
+            cache-path，  ============= Context.getCacheDir()
+            external-path， ==========  Environment.getExternalStorageDirectory()
+            external-files-path，  ==========  Context.getExternalFilesDir()
+            external-cache-path，   ==========Context.getExternalCacheDir()
+还有一个没有写进文档的，但是也可以使用的element，是root-path，直接对应文件系统根目录
+
+-->
+<paths>
+    <external-path name="update" path=""/>
+</paths>

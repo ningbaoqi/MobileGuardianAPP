@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">"MobileGuardianapp "</string>
+    <string name="load_progress">下载进度：</string>
+    <string name="version">版本号：</string>
+</resources>

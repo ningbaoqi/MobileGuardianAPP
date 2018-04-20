@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_app_version_size">18sp</dimen>
+    <dimen name="splash_margin_left">5dp</dimen>
+    <dimen name="splash_load_progress">20sp</dimen>
+</resources>

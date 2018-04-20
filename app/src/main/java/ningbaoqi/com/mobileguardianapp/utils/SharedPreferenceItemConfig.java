@@ -7,4 +7,5 @@ package ningbaoqi.com.mobileguardianapp.utils;
 public class SharedPreferenceItemConfig {
     public static final String SharedPreferenceFileName = "config";
     public static final String SharedPreferenceAutoUpdate = "auto_update";
+    public static final String SharedPreferencePassword = "password";
 }

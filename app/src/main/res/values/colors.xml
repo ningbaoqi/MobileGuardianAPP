@@ -5,4 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="black">#000000</color>
     <color name="green">#00ff00</color>
+    <color name="home_title_background">#8866ff00</color>
+    <color name="white">#ffffff</color>
+    <color name="fen">#66ff6600</color>
 </resources>

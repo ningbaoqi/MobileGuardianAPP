@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ningbaoqi="http://schemas.android.com/apk/res/ningbaoqi.com.mobileguardianapp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="@string/setup2_title"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:text="@string/setup2_content"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/focused_text_margin"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        android:text="@string/setup2_content_1"
+        />
+
+    <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView
+        android:id="@+id/sivSIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/gridview_vertical_space"
+        android:layout_marginTop="@dimen/gridview_vertical_space"
+        ningbaoqi:desc_off="@string/setup2_content_2_content2"
+        ningbaoqi:desc_on="@string/setup2_content_2_content1"
+        ningbaoqi:title="@string/setup2_content_2_title"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/bind"
+            />
+
+        <Button style="@style/PreviousStyle"/>
+
+        <Button style="@style/NextStyle"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gridview_vertical_space"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"
+            />
+    </LinearLayout>
+</LinearLayout>

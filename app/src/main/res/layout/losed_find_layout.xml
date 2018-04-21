@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        style="@style/TitleStyle"
+        android:text="@string/anti_theft"
+        />
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/ContentStyle"
+            android:id="@+id/textview1"
+            android:text="@string/safe_number"
+            />
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/home_title_textsize"
+            android:layout_marginRight="@dimen/splash_margin_left"
+            android:layout_alignBottom="@id/textview1"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@mipmap/listview_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/ContentStyle"
+            android:id="@+id/textview3"
+            android:text="@string/safe_on_or_off"
+            />
+        <ImageView
+            android:layout_width="@dimen/locksize"
+            android:layout_height="@dimen/locksize"
+            android:src="@mipmap/lock"
+            android:id="@+id/lock"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+    
+    <ImageView
+        android:background="@mipmap/listview_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:text="@string/set_guide"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:background="@drawable/shape_selector"
+        android:clickable="true"
+        android:onClick="reEnter"
+        android:layout_marginRight="@dimen/splash_margin_left"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/listview_divider"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:text="@string/function_profile"
+        android:background="@color/gray"
+        android:layout_marginRight="@dimen/splash_margin_left"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:text="@string/function1"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:text="@string/function2"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:text="@string/function3"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        />
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_13_dp"
+        style="@style/ContentStyle"
+        android:text="@string/function4"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        />
+</LinearLayout>

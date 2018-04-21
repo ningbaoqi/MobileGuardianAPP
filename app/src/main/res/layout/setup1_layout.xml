@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="@string/setup1_title"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:text="@string/setup1_1"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        android:text="@string/setup1_2"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        android:text="@string/setup1_3"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        android:text="@string/setup1_4"
+        />
+
+    <TextView
+        style="@style/ContentStyle"
+        android:layout_marginTop="@dimen/margin_13_dp"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:gravity="start|center_vertical"
+        android:text="@string/setup1_5"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/setup1"
+            />
+
+        <Button style="@style/NextStyle"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/gridview_vertical_space">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_online"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/presence_invisible"/>
+    </LinearLayout>
+</LinearLayout>

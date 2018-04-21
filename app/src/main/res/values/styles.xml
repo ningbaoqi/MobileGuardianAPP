@@ -17,4 +17,36 @@
         <item name="android:background">@color/home_title_background</item>
         <item name="android:gravity">center</item>
     </style>
+
+    <style name="ContentStyle">
+        <item name="android:layout_marginLeft">@dimen/splash_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/splash_margin_left</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/home_title_textsize</item>
+    </style>
+
+    <style name="NextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:text">@string/text</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:drawableRight">@mipmap/next</item>
+        <item name="android:onClick">next</item>
+    </style>
+
+    <style name="PreviousStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:text">@string/previous</item>
+        <item name="android:background">@drawable/button</item>
+        <item name="android:drawableRight">@mipmap/previous</item>
+        <item name="android:onClick">previous</item>
+    </style>
+
 </resources>

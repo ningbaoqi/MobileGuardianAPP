@@ -5,3 +5,7 @@
 ### 设置中心功能
 ![image](https://github.com/ningbaoqi/MobileGuardianAPP/blob/master/gif/settings1.gif)
 ![image](https://github.com/ningbaoqi/MobileGuardianAPP/blob/master/gif/setting2.gif)
+### 手机防盗功能
+##### 手机防盗的导航界面
+![image](https://github.com/ningbaoqi/MobileGuardianAPP/blob/master/gif/guide1.gif)
+![image](https://github.com/ningbaoqi/MobileGuardianAPP/blob/master/gif/guide2.gif)

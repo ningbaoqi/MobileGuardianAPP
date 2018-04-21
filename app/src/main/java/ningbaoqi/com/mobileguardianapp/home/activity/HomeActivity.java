@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ningbaoqi.com.mobileguardianapp.R;
+import ningbaoqi.com.mobileguardianapp.losefind.activity.LosedFindActivity;
 import ningbaoqi.com.mobileguardianapp.settings.activity.SettingsActivity;
 import ningbaoqi.com.mobileguardianapp.utils.MD5Utils;
 import ningbaoqi.com.mobileguardianapp.utils.SharedPreferenceItemConfig;
@@ -92,7 +93,7 @@ public class HomeActivity extends AppCompatActivity {
                 String savedPassword = sharedPreferences.getString(SharedPreferenceItemConfig.SharedPreferencePassword , null);
                 if (!TextUtils.isEmpty(inputPassword) && MD5Utils.encode(inputPassword).equals(savedPassword)) {
                     dialog.dismiss();
-//                    startActivity(new Intent(HomeActivity.this, LosedFindActivity.class));
+                    startActivity(new Intent(HomeActivity.this, LosedFindActivity.class));
                 } else {
                     Toast.makeText(HomeActivity.this , "输入密码错误" , Toast.LENGTH_LONG).show();
                     etPassword.setText("");
@@ -126,7 +127,7 @@ public class HomeActivity extends AppCompatActivity {
                 if (!TextUtils.isEmpty(password) && password.equals(confirm)) {
                     sharedPreferences.edit().putString(SharedPreferenceItemConfig.SharedPreferencePassword, MD5Utils.encode(password)).commit();
                     dialog.dismiss();
-//                    startActivity(new Intent(HomeActivity.this, LosedFindActivity.class));
+                    startActivity(new Intent(HomeActivity.this, LosedFindActivity.class));
                 } else {
                     Toast.makeText(HomeActivity.this , "输入的密码不正确" , Toast.LENGTH_LONG).show();
                 }

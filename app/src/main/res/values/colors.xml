@@ -9,4 +9,5 @@
     <color name="white">#ffffff</color>
     <color name="fen">#66ff6600</color>
     <color name="gray">#8000</color>
+    <color name="red">#ff0000</color>
 </resources>

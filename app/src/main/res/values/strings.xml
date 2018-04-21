@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">"MobileGuardianapp"</string>
+    <string name="app_name">手机安全卫士</string>
     <string name="load_progress">下载进度：</string>
     <string name="version">版本号：</string>
     <string name="function_menu">功能列表</string>
@@ -21,4 +21,37 @@
     <string name="auto_update_setting">自动更新设置</string>
     <string name="auto_update_setting_on">自动更新设置已经开启</string>
     <string name="auto_update_setting_off">自动更新已关闭</string>
+    <string name="anti_theft">手机防盗</string>
+    <string name="safe_number">安全号码</string>
+    <string name="safe_on_or_off">防盗保护是否开启</string>
+    <string name="set_guide">重新进入设置导航</string>
+    <string name="function_profile">功能简介</string>
+    <string name="function1">GPS追踪：#*location*#</string>
+    <string name="function2">播放报警音乐：#*alarm*#</string>
+    <string name="function3">远程删除数据：#*wipedata*#</string>
+    <string name="function4">远程锁屏：#*lockscreen*#</string>
+    <string name="setup1_title">1.欢迎使用手机防盗</string>
+    <string name="setup1_1">您的手机防盗卫士：</string>
+    <string name="setup1_2">SIM卡变更报警</string>
+    <string name="setup1_3">GPS追踪</string>
+    <string name="setup1_4">远程销毁数据</string>
+    <string name="setup1_5">远程锁屏</string>
+    <string name="text">下一步</string>
+    <string name="setup2_title">2.手机卡绑定</string>
+    <string name="setup2_content">通过绑定SIM卡：</string>
+    <string name="setup2_content_1">下次重启手机如果发现SIM卡变化,就会发送报警短信</string>
+    <string name="setup2_content_2_title">点击绑定SIM卡</string>
+    <string name="setup2_content_2_content1">SIM卡已经绑定</string>
+    <string name="setup2_content_2_content2">SIM卡没有绑定</string>
+    <string name="previous">上一步</string>
+    <string name="setup3_title">3.设置安全号码</string>
+    <string name="setup3_content">SIM卡变更后:</string>
+    <string name="setup3_content_1">报警短信会发送给安全号码</string>
+    <string name="setup3_content_2">请输入或者选择安全号码</string>
+    <string name="setup3_content_3">请选择联系人</string>
+    <string name="setup4_title">4.恭喜您设置完成</string>
+    <string name="setup4_content">防盗保护没有开启</string>
+    <string name="set_commit">设置完成</string>
+    <string name="setup4_content_1">防盗保护已经开启</string>
+    <string name="setup4_content_2">防盗保护没有开启</string>
 </resources>

@@ -9,4 +9,6 @@
     <dimen name="gridview_vertical_space">30dp</dimen>
     <dimen name="settings_content_size">16sp</dimen>
     <dimen name="line">1dp</dimen>
+    <dimen name="margin_13_dp">13dp</dimen>
+    <dimen name="locksize">30dp</dimen>
 </resources>

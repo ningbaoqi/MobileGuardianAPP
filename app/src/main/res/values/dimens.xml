@@ -7,4 +7,6 @@
     <dimen name="home_title_textsize">22sp</dimen>
     <dimen name="focused_text_margin">8dp</dimen>
     <dimen name="gridview_vertical_space">30dp</dimen>
+    <dimen name="settings_content_size">16sp</dimen>
+    <dimen name="line">1dp</dimen>
 </resources>

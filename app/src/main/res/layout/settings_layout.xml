@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ningbaoqi="http://schemas.android.com/apk/res/ningbaoqi.com.mobileguardianapp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="@string/home_array_item9"
+        />
+    <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView
+        android:id="@+id/sivupdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ningbaoqi:title="@string/auto_update_setting"
+        ningbaoqi:desc_on="@string/auto_update_setting_on"
+        ningbaoqi:desc_off="@string/auto_update_setting_off"
+        >
+    </ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView>
+</LinearLayout>

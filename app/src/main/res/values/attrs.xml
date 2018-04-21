@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自定义属性  resources的子元素有 attr子元素：定义一个属性 ； declare-styleable子元素：定义一个styleable对象，每个styleable对象就是一组attr属性的集合-->
+<resources>
+    <declare-styleable name="SettingItemView">
+        <attr name="title" format="string"/>
+        <attr name="desc_on" format="string"/>
+        <attr name="desc_off" format="string"/>
+    </declare-styleable>
+</resources>

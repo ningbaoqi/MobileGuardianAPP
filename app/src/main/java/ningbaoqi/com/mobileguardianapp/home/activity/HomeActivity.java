@@ -1,6 +1,7 @@
 package ningbaoqi.com.mobileguardianapp.home.activity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ningbaoqi.com.mobileguardianapp.R;
+import ningbaoqi.com.mobileguardianapp.settings.activity.SettingsActivity;
 import ningbaoqi.com.mobileguardianapp.utils.MD5Utils;
 import ningbaoqi.com.mobileguardianapp.utils.SharedPreferenceItemConfig;
 
@@ -57,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
                         showPassworDialog();
                         break;
                     case SETTING_CENTER:
-//                        startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
+                        startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
                         break;
                     default:
                         break;

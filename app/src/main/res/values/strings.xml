@@ -18,4 +18,7 @@
     <string name="yes">确定</string>
     <string name="cancel">取消</string>
     <string name="please_input_password_again">请再次输入密码</string>
+    <string name="auto_update_setting">自动更新设置</string>
+    <string name="auto_update_setting_on">自动更新设置已经开启</string>
+    <string name="auto_update_setting_off">自动更新已关闭</string>
 </resources>

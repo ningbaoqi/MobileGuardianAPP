@@ -1,1 +1,1 @@
-include ':app', ':installapkdemo', ':contactsdemo'
+include ':app', ':installapkdemo', ':contactsdemo', ':receivesmsservice'

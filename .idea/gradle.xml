@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/contactsdemo" />
             <option value="$PROJECT_DIR$/installapkdemo" />
+            <option value="$PROJECT_DIR$/receivesmsservice" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

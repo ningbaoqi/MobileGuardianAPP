@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OneKeyLockScreen</string>
+    <string name="description">有了超级设备管理器你会很NB</string>
+    <string name="sample_device_admin">超级设备管理器</string>
+</resources>

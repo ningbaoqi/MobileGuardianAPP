@@ -1,1 +1,1 @@
-include ':app', ':installapkdemo', ':contactsdemo', ':receivesmsservice', ':locationdemo'
+include ':app', ':installapkdemo', ':contactsdemo', ':receivesmsservice', ':locationdemo', ':onekeylockscreen'

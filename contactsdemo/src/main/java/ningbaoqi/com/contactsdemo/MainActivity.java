@@ -1,48 +1,22 @@
-package ningbaoqi.com.mobileguardianapp.losefind.activity;
+package ningbaoqi.com.contactsdemo;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import ningbaoqi.com.mobileguardianapp.R;
-
 /**
- * Created by ningbaoqi on 18-4-21.
- */
+ * 获取联系人电话和名字
+ * */
+public class MainActivity extends AppCompatActivity {
 
-public class ContactActivity extends AppCompatActivity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contact_activity);
-        ListView listView = (ListView) findViewById(R.id.contact_list);
-        final ArrayList<HashMap<String, String>> contacts = readContacts();
-        listView.setAdapter(new SimpleAdapter(this, contacts, R.layout.contact_list_item, new String[]{"name", "phone"}, new int[]{R.id.contact_name, R.id.contact_phone}));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String phone = contacts.get(position).get("phone");
-                Intent intent = new Intent();
-                intent.putExtra("phone", phone);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
-            }
-        });
-    }
-
-    private ArrayList<HashMap<String, String>> readContacts() {
+        setContentView(R.layout.activity_main);
         Uri rawCOntactsUri = Uri.parse("content://com.android.contacts/raw_contacts");
         Uri dataUri = Uri.parse("content://com.android.contacts/data");
         ArrayList<HashMap<String, String>> list = new ArrayList<>();
@@ -69,6 +43,5 @@ public class ContactActivity extends AppCompatActivity {
             }
             rawContactsCursor.close();
         }
-        return list;
     }
 }

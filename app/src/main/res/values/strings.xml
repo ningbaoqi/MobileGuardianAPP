@@ -54,4 +54,5 @@
     <string name="set_commit">设置完成</string>
     <string name="setup4_content_1">防盗保护已经开启</string>
     <string name="setup4_content_2">防盗保护没有开启</string>
+    <string name="choose_contact">请选择联系人</string>
 </resources>

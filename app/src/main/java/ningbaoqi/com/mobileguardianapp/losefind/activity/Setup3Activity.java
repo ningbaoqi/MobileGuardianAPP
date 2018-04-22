@@ -58,9 +58,9 @@ public class Setup3Activity extends BaseSetupActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == Activity.RESULT_OK) {
-            String number = data.getStringExtra("number");
-            number = number.replaceAll("-", "").replaceAll(" ", "");
-            et_phone.setText(number);
+            String phone = data.getStringExtra("phone");
+            phone = phone.replaceAll("-", "").replaceAll(" ", "");
+            et_phone.setText(phone);
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

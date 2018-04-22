@@ -2,6 +2,7 @@ package ningbaoqi.com.mobileguardianapp.losefind.service;
 
 import android.app.Service;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.ContentObserver;
@@ -77,6 +78,10 @@ public class ReceiveSMSService extends Service {
                     } else if (address.equals(sharedPreferences.getString(SharedPreferenceItemConfig.SharedPreferenceSafeNumber, "--")) && body.equals(SpecialCommand.LOCATION)) {
                         //启动定位
                         Log.d("nbq", "启动定位");
+                        startService(new Intent(ReceiveSMSService.this, LocationService.class));
+                        SharedPreferences sharedPreferences = getSharedPreferences(SharedPreferenceItemConfig.SharedPreferenceFileName, Context.MODE_PRIVATE);
+                        String location = sharedPreferences.getString(SharedPreferenceItemConfig.SharedPreferenceLocation, "getting location...");
+                        Log.d("nbq", location);
                     } else if (address.equals(sharedPreferences.getString(SharedPreferenceItemConfig.SharedPreferenceSafeNumber, "--")) && body.equals(SpecialCommand.WIPEDATA)) {
                         //启动擦除数据
                         Log.d("nbq", "启动擦除数据");

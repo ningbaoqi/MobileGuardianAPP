@@ -33,4 +33,8 @@ public class SharedPreferenceItemConfig {
      * sim卡的序列号,有序列号说明绑定了
      * */
     public static final String SharedPreferenceSim = "sim";
+    /**
+     * 坐标
+     */
+    public static final String SharedPreferenceLocation = "location";
 }

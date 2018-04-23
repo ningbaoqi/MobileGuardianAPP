@@ -13,7 +13,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
-
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/home_callmsgsafe"
@@ -35,7 +36,8 @@
         <activity android:name=".losefind.activity.Setup2Activity" />
         <activity android:name=".losefind.activity.Setup3Activity" />
         <activity android:name=".losefind.activity.Setup4Activity" />
-
+        <activity android:name=".advancetool.activity.AdvanceToolsActivity"/>
+        <activity android:name=".advancetool.activity.AddressActivity"/>
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="ningbaoqi.com.mobileguardianapp.fileprovider"
@@ -52,5 +54,6 @@
         </receiver>
         <service android:name=".losefind.service.ReceiveSMSService" />
         <service android:name=".losefind.service.LocationService" />
+        <service android:name=".advancetool.service.AddressService"/>
     </application>
 </manifest>

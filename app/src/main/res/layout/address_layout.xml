@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="@string/address_search"
+        />
+
+    <EditText
+        android:id="@+id/et_searchnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        />
+
+    <Button
+        android:onClick="query"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/address_search"
+        />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_result"
+        android:textSize="@dimen/splash_load_progress"
+        android:layout_marginLeft="@dimen/focused_text_margin"
+        />
+
+</LinearLayout>

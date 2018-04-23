@@ -55,4 +55,11 @@
     <string name="setup4_content_1">防盗保护已经开启</string>
     <string name="setup4_content_2">防盗保护没有开启</string>
     <string name="choose_contact">请选择联系人</string>
+    <string name="number_location_search">电话归属地查询</string>
+    <string name="advance_tools_title">高级工具</string>
+    <string name="address_search">归属地查询</string>
+    <string name="search_result">查询结果</string>
+    <string name="auto_show_address_off">归属地显示已经关闭</string>
+    <string name="auto_show_address_on">归属地显示已经开启</string>
+    <string name="auto_show_address">归属地显示设置</string>
 </resources>

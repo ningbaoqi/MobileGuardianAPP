@@ -10,13 +10,24 @@
         style="@style/TitleStyle"
         android:text="@string/home_array_item9"
         />
+
     <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView
         android:id="@+id/sivupdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ningbaoqi:title="@string/auto_update_setting"
-        ningbaoqi:desc_on="@string/auto_update_setting_on"
         ningbaoqi:desc_off="@string/auto_update_setting_off"
+        ningbaoqi:desc_on="@string/auto_update_setting_on"
+        ningbaoqi:title="@string/auto_update_setting"
+        >
+    </ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView>
+
+    <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView
+        android:id="@+id/sivAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ningbaoqi:desc_off="@string/auto_show_address_off"
+        ningbaoqi:desc_on="@string/auto_show_address_on"
+        ningbaoqi:title="@string/auto_show_address"
         >
     </ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView>
 </LinearLayout>

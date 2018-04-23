@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="@string/advance_tools_title"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_light_selector"
+        android:clickable="true"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:drawablePadding="@dimen/focused_text_margin"
+        android:gravity="center_vertical"
+        android:onClick="numberAddressQuery"
+        android:padding="@dimen/focused_text_margin"
+        android:text="@string/number_location_search"
+        android:textColor="@color/black"
+        android:textSize="@dimen/splash_load_progress"
+        />
+
+</LinearLayout>

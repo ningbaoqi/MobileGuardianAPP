@@ -31,6 +31,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -99,6 +100,7 @@ public class SplashActivity extends AppCompatActivity {
         splashAppVersion.setText(getResources().getString(R.string.version) + getVersionName());
         loadProgress = (TextView) findViewById(R.id.load_progress);
         SharedPreferences sharedPreferences = getSharedPreferences(SharedPreferenceItemConfig.SharedPreferenceFileName, MODE_PRIVATE);
+        copyDatabase("address.db");
         boolean autoUpdate = sharedPreferences.getBoolean(SharedPreferenceItemConfig.SharedPreferenceAutoUpdate, true);
         if (autoUpdate) {
             checkVersion();
@@ -260,7 +262,7 @@ public class SplashActivity extends AppCompatActivity {
                         /**
                          * 取消安装时，会返回结果
                          * */
-                        startActivityForResult(intent , 0);
+                        startActivityForResult(intent, 0);
                     } else {
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setDataAndType(Uri.fromFile(apkFile), "application/vnd.android.package-archive");
@@ -300,6 +302,41 @@ public class SplashActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 0) {
             enterHome();
+        }
+    }
+
+    /**
+     * 拷贝查询数据库
+     */
+    private void copyDatabase(String databaseName) {
+        InputStream inputStream = null;
+        FileOutputStream outputStream = null;
+        try {
+            /**
+             * 获取原始文件输入流
+             * */
+            inputStream = getAssets().open(databaseName);
+            File file = new File(getFilesDir(), databaseName);
+            if (file.exists()) {
+                return;
+            }
+            outputStream = new FileOutputStream(file);
+            int length;
+            byte[] buffer = new byte[1024];
+            while ((length = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, length);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                inputStream.close();
+                if (outputStream != null) {
+                    outputStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

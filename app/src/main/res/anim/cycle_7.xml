@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--循环插补器   android:cycles="7" 循环次数-->
+<cycleInterpolator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:cycles="7">
+</cycleInterpolator>

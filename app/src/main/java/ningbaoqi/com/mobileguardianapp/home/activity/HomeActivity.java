@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import ningbaoqi.com.mobileguardianapp.R;
+import ningbaoqi.com.mobileguardianapp.advancetool.activity.AdvanceToolsActivity;
 import ningbaoqi.com.mobileguardianapp.losefind.activity.LosedFindActivity;
 import ningbaoqi.com.mobileguardianapp.settings.activity.SettingsActivity;
 import ningbaoqi.com.mobileguardianapp.utils.MD5Utils;
@@ -32,6 +33,7 @@ import ningbaoqi.com.mobileguardianapp.utils.SharedPreferenceItemConfig;
 
 public class HomeActivity extends AppCompatActivity {
     private static final int PHONE_PREVENT_STEAL = 0;
+    private static final int ADVANCE_TOOLS = 7;
     private static final int SETTING_CENTER = 8;
     private SharedPreferences sharedPreferences;
     private String[] stringItems;
@@ -58,6 +60,9 @@ public class HomeActivity extends AppCompatActivity {
                 switch (position) {
                     case PHONE_PREVENT_STEAL:
                         showPassworDialog();
+                        break;
+                    case ADVANCE_TOOLS:
+                        startActivity(new Intent(HomeActivity.this, AdvanceToolsActivity.class));
                         break;
                     case SETTING_CENTER:
                         startActivity(new Intent(HomeActivity.this, SettingsActivity.class));

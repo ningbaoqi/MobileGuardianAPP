@@ -23,4 +23,20 @@
         <item>@mipmap/home_tools</item>
         <item>@mipmap/home_trojan</item>
     </array>
+
+    <string-array name="address_single_choose_array" >
+        <item>@string/address_single_choose_array_1</item>
+        <item>@string/address_single_choose_array_2</item>
+        <item>@string/address_single_choose_array_3</item>
+        <item>@string/address_single_choose_array_4</item>
+        <item>@string/address_single_choose_array_5</item>
+    </string-array>
+
+    <array name="address_single_drawable_array">
+        <item>@drawable/call_locate_white</item>
+        <item>@drawable/call_locate_orange</item>
+        <item>@drawable/call_locate_blue</item>
+        <item>@drawable/call_locate_gray</item>
+        <item>@drawable/call_locate_blue</item>
+    </array>
 </resources>

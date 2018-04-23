@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/call_locate_blue"
+    android:orientation="horizontal"
+    android:padding="@dimen/focused_text_margin"
+    android:gravity="center_vertical"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageview1"
+        android:src="@android:drawable/ic_menu_call"
+        />
+    <TextView
+        android:id="@+id/tv_number"
+        android:text="@string/location"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/settings_content_size"
+        android:layout_height="wrap_content" />
+</LinearLayout>

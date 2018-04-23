@@ -30,4 +30,16 @@
         ningbaoqi:title="@string/auto_show_address"
         >
     </ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView>
+
+    <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemClick
+        android:id="@+id/scv_address_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemClick
+        android:id="@+id/scv_address_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

@@ -31,10 +31,19 @@ public class SharedPreferenceItemConfig {
     public static final String SharedPreferenceProtected = "protected";
     /**
      * sim卡的序列号,有序列号说明绑定了
-     * */
+     */
     public static final String SharedPreferenceSim = "sim";
     /**
      * 坐标
      */
     public static final String SharedPreferenceLocation = "location";
+    /**
+     * 自定义Toast的显示风格
+     */
+    public static final String SharedPreferenceAddressStyle = "address_style";
+    /**
+     * dragview最后保存的left和top
+     */
+    public static final String SharedPreferenceDragLastLeft = "left";
+    public static final String SharedPreferenceDragLastTop = "top";
 }

@@ -38,6 +38,7 @@
         <activity android:name=".losefind.activity.Setup4Activity" />
         <activity android:name=".advancetool.activity.AdvanceToolsActivity"/>
         <activity android:name=".advancetool.activity.AddressActivity"/>
+        <activity android:name=".settings.activity.DragViewActivity" />
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="ningbaoqi.com.mobileguardianapp.fileprovider"

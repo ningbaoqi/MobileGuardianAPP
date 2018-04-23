@@ -62,4 +62,15 @@
     <string name="auto_show_address_off">归属地显示已经关闭</string>
     <string name="auto_show_address_on">归属地显示已经开启</string>
     <string name="auto_show_address">归属地显示设置</string>
+    <string name="location">未知号码</string>
+    <string name="addressShowStyle">归属地显示风格</string>
+    <string name="address_dialog_title">归属地提示风格</string>
+    <string name="address_single_choose_array_1">半透明</string>
+    <string name="address_single_choose_array_2">活力橙</string>
+    <string name="address_single_choose_array_3">卫士蓝</string>
+    <string name="address_single_choose_array_4">金属灰</string>
+    <string name="address_single_choose_array_5">苹果绿</string>
+    <string name="address_location">归属地显示位置</string>
+    <string name="set_address_location">设置归属地提示框显示位置</string>
+    <string name="drag_view_text">按住提示框拖到任意位置\n按手机返回键立即生效</string>
 </resources>

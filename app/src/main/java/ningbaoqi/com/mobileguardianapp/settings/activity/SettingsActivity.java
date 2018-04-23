@@ -69,7 +69,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (sivAddress.isChecked()) {
                     sivAddress.setChecked(false);
-                    startService(new Intent(SettingsActivity.this, AddressService.class));
+                    stopService(new Intent(SettingsActivity.this, AddressService.class));
                 } else {
                     sivAddress.setChecked(true);
                     startService(new Intent(SettingsActivity.this, AddressService.class));

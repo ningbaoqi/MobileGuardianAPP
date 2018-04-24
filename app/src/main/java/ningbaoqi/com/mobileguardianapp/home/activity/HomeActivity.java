@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import ningbaoqi.com.mobileguardianapp.R;
 import ningbaoqi.com.mobileguardianapp.advancetool.activity.AdvanceToolsActivity;
-import ningbaoqi.com.mobileguardianapp.communicationguard.activity.ComminicationGuard;
+import ningbaoqi.com.mobileguardianapp.communicationguard.activity.ComminicationGuardActivity;
 import ningbaoqi.com.mobileguardianapp.losefind.activity.LosedFindActivity;
 import ningbaoqi.com.mobileguardianapp.settings.activity.SettingsActivity;
 import ningbaoqi.com.mobileguardianapp.utils.MD5Utils;
@@ -64,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
                         showPassworDialog();
                         break;
                     case COMMUNICATION_GUARD:
-                        startActivity(new Intent(HomeActivity.this , ComminicationGuard.class));
+                        startActivity(new Intent(HomeActivity.this , ComminicationGuardActivity.class));
                         break;
                     case ADVANCE_TOOLS:
                         startActivity(new Intent(HomeActivity.this, AdvanceToolsActivity.class));

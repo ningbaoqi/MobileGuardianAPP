@@ -74,4 +74,11 @@
     <string name="set_address_location">设置归属地提示框显示位置</string>
     <string name="drag_view_text">按住提示框拖到任意位置\n按手机返回键立即生效</string>
     <string name="black_manage">黑名单管理</string>
+    <string name="phone_intercept">电话拦截</string>
+    <string name="all_interrupt">全部拦截</string>
+    <string name="sms_interrupt">短信拦截</string>
+    <string name="play_life">玩命加载中...</string>
+    <string name="previous_page">上一页</string>
+    <string name="next_page">下一页</string>
+    <string name="jump_to_page">跳转到哪一页</string>
 </resources>

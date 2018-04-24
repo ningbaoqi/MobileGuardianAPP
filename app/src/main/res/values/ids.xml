@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--使用这种方式可以进行ID管理-->
+<resources>
+    <item name="tv_mode" type="id" />
+    <item name="ll_progress_bar" type="id" />
+    <item name="et_page_number" type="id" />
+    <item name="tv_page_number" type="id" />
+</resources>

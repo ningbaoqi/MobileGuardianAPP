@@ -39,7 +39,7 @@
         <activity android:name=".losefind.activity.Setup4Activity"/>
         <activity android:name=".advancetool.activity.AdvanceToolsActivity"/>
         <activity android:name=".advancetool.activity.AddressActivity"/>
-        <activity android:name=".communicationguard.activity.ComminicationGuard"/>
+        <activity android:name=".communicationguard.activity.ComminicationGuardActivity"/>
         <activity
             android:name=".settings.activity.DragViewActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"/>

@@ -23,4 +23,5 @@ public class ExampleInstrumentedTest {
 
         assertEquals("ningbaoqi.com.mobileguardianapp", appContext.getPackageName());
     }
+
 }

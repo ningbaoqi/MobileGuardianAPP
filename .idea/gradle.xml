@@ -10,10 +10,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/contactsdemo" />
+            <option value="$PROJECT_DIR$/doubleclickdemo" />
             <option value="$PROJECT_DIR$/installapkdemo" />
             <option value="$PROJECT_DIR$/locationdemo" />
             <option value="$PROJECT_DIR$/onekeylockscreen" />
             <option value="$PROJECT_DIR$/receivesmsservice" />
+            <option value="$PROJECT_DIR$/threeclickdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

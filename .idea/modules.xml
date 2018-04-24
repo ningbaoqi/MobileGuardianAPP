@@ -3,12 +3,21 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MobileGuardianAPP.iml" filepath="$PROJECT_DIR$/MobileGuardianAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileGuardianAPP.iml" filepath="$PROJECT_DIR$/MobileGuardianAPP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/contactsdemo/contactsdemo.iml" filepath="$PROJECT_DIR$/contactsdemo/contactsdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contactsdemo/contactsdemo.iml" filepath="$PROJECT_DIR$/contactsdemo/contactsdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doubleclickdemo/doubleclickdemo.iml" filepath="$PROJECT_DIR$/doubleclickdemo/doubleclickdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/installapkdemo/installapkdemo.iml" filepath="$PROJECT_DIR$/installapkdemo/installapkdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/installapkdemo/installapkdemo.iml" filepath="$PROJECT_DIR$/installapkdemo/installapkdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/locationdemo/locationdemo.iml" filepath="$PROJECT_DIR$/locationdemo/locationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/locationdemo/locationdemo.iml" filepath="$PROJECT_DIR$/locationdemo/locationdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/onekeylockscreen/onekeylockscreen.iml" filepath="$PROJECT_DIR$/onekeylockscreen/onekeylockscreen.iml" />
       <module fileurl="file://$PROJECT_DIR$/onekeylockscreen/onekeylockscreen.iml" filepath="$PROJECT_DIR$/onekeylockscreen/onekeylockscreen.iml" />
       <module fileurl="file://$PROJECT_DIR$/receivesmsservice/receivesmsservice.iml" filepath="$PROJECT_DIR$/receivesmsservice/receivesmsservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/receivesmsservice/receivesmsservice.iml" filepath="$PROJECT_DIR$/receivesmsservice/receivesmsservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threeclickdemo/threeclickdemo.iml" filepath="$PROJECT_DIR$/threeclickdemo/threeclickdemo.iml" />
     </modules>
   </component>
 </project>

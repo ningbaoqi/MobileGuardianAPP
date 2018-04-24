@@ -13,6 +13,8 @@ import android.support.annotation.Nullable;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -36,6 +38,11 @@ public class AddressService extends Service {
     private TextView textView;
     private View view;
     private SharedPreferences sharedPreferences;
+    private int startX;
+    private int startY;
+    private WindowManager.LayoutParams params;
+    private int windowWidth;
+    private int windowHeight;
 
     @Nullable
     @Override
@@ -108,14 +115,22 @@ public class AddressService extends Service {
     private void showToast(String text) {
         //可以在其他第三方app中弹出自己的浮窗
         windowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
-        WindowManager.LayoutParams params = new WindowManager.LayoutParams();//设置配置属性
+        windowWidth = windowManager.getDefaultDisplay().getWidth();
+        windowHeight = windowManager.getDefaultDisplay().getHeight();
+        //设置配置属性
+        params = new WindowManager.LayoutParams();
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         params.width = WindowManager.LayoutParams.WRAP_CONTENT;
-        params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+        params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
         params.format = PixelFormat.TRANSLUCENT;
-        params.type = WindowManager.LayoutParams.TYPE_TOAST;
+        params.type = WindowManager.LayoutParams.TYPE_PHONE;//需要权限
         params.setTitle("Toast");
+        params.gravity = Gravity.LEFT + Gravity.TOP;//将重心位置设置成左上方也就是(0,0)从左上方开始
         sharedPreferences = getSharedPreferences(SharedPreferenceItemConfig.SharedPreferenceFileName, MODE_PRIVATE);
+        int saveLeft = sharedPreferences.getInt(SharedPreferenceItemConfig.SharedPreferenceDragLastLeft, 0);
+        int saveTop = sharedPreferences.getInt(SharedPreferenceItemConfig.SharedPreferenceDragLastTop, 0);
+        params.x = saveLeft;//设置浮窗位置，基于左上方的偏移量
+        params.y = saveTop;
         int position = sharedPreferences.getInt(SharedPreferenceItemConfig.SharedPreferenceAddressStyle, 0);
         TypedArray typedArray = getResources().obtainTypedArray(R.array.address_single_drawable_array );
         view = View.inflate(this, R.layout.toast_view, null);
@@ -124,5 +139,47 @@ public class AddressService extends Service {
         textView = view.findViewById(R.id.tv_number);
         textView.setText(text);
         windowManager.addView(view, params);//将view添加到屏幕上，即Window上
+        view.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        startX = (int) event.getRawX();
+                        startY = (int) event.getRawY();
+                        break;
+                    case MotionEvent.ACTION_MOVE:
+                        int endX = (int) event.getRawX();
+                        int endY = (int) event.getRawY();
+                        int dx = endX - startX;
+                        int dy = endY - startY;
+                        params.x += dx;
+                        params.y += dy;
+                        if (params.x < 0) {
+                            params.x = 0;
+                        }
+                        if (params.y < 0) {
+                            params.y = 0;
+                        }
+                        if (params.x > windowWidth - view.getWidth()) {
+                            params.x = windowWidth - view.getWidth();
+                        }
+                        if (params.y > windowHeight - view.getHeight()) {
+                            params.y = windowHeight - view.getHeight();
+                        }
+                        windowManager.updateViewLayout(view , params);//更新浮窗
+                        startX = (int) event.getRawX();
+                        startY = (int) event.getRawY();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putInt(SharedPreferenceItemConfig.SharedPreferenceDragLastLeft, params.x);
+                        editor.putInt(SharedPreferenceItemConfig.SharedPreferenceDragLastTop, params.y);
+                        editor.commit();
+                        Log.d("nbq", params.x + "--" + params.y);
+                        break;
+                }
+                return false;
+            }
+        });
     }
 }

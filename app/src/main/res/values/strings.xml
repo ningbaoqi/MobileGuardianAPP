@@ -73,4 +73,5 @@
     <string name="address_location">归属地显示位置</string>
     <string name="set_address_location">设置归属地提示框显示位置</string>
     <string name="drag_view_text">按住提示框拖到任意位置\n按手机返回键立即生效</string>
+    <string name="black_manage">黑名单管理</string>
 </resources>

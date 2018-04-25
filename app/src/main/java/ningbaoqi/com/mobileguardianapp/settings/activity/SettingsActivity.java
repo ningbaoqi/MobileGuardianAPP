@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import ningbaoqi.com.mobileguardianapp.R;
 import ningbaoqi.com.mobileguardianapp.advancetool.service.AddressService;
+import ningbaoqi.com.mobileguardianapp.communicationguard.service.CallSafaService;
 import ningbaoqi.com.mobileguardianapp.settings.view.SettingItemClick;
 import ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView;
 import ningbaoqi.com.mobileguardianapp.utils.ServiceStatusUtils;
@@ -27,6 +28,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private SettingItemView sivAddress;
     private SettingItemView sivUpdate;
+    private SettingItemView sivBlackNumber;
     private SettingItemClick scvAddressStyle;
     private SettingItemClick scvAddressLocation;
     private SharedPreferences sharedPreferences;
@@ -44,6 +46,32 @@ public class SettingsActivity extends AppCompatActivity {
         if (!Settings.canDrawOverlays(this)) {
             getGrant();
         }
+        initBlackNumberUI();
+    }
+
+    /**
+     * 初始化黑名单设置
+     */
+    private void initBlackNumberUI() {
+        sivBlackNumber = (SettingItemView) findViewById(R.id.siv_blackNumber);
+        boolean isRunning = ServiceStatusUtils.isServiceRunning(this, "ningbaoqi.com.mobileguardianapp.communicationguard.service.CallSafaService");
+        if (isRunning) {
+            sivBlackNumber.setChecked(true);
+        } else {
+            sivBlackNumber.setChecked(false);
+        }
+        sivBlackNumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (sivBlackNumber.isChecked()) {
+                    sivBlackNumber.setChecked(false);
+                    stopService(new Intent(SettingsActivity.this, CallSafaService.class));
+                } else {
+                    sivBlackNumber.setChecked(true);
+                    startService(new Intent(SettingsActivity.this, CallSafaService.class));
+                }
+            }
+        });
     }
 
     /**

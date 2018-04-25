@@ -84,4 +84,7 @@
     <string name="add">添加</string>
     <string name="add_black_number">添加黑名单</string>
     <string name="please_input_black_number">请输入黑名单</string>
+    <string name="black_number_off">黑名单更新已关闭</string>
+    <string name="black_number_on">黑名单更新已开启</string>
+    <string name="black_number">黑名单设置</string>
 </resources>

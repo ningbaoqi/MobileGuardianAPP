@@ -42,4 +42,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+
+    <ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView
+        android:id="@+id/siv_blackNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ningbaoqi:desc_off="@string/black_number_off"
+        ningbaoqi:desc_on="@string/black_number_on"
+        ningbaoqi:title="@string/black_number"
+        >
+    </ningbaoqi.com.mobileguardianapp.settings.view.SettingItemView>
 </LinearLayout>

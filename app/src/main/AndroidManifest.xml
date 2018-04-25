@@ -62,5 +62,6 @@
         <service android:name=".losefind.service.ReceiveSMSService"/>
         <service android:name=".losefind.service.LocationService"/>
         <service android:name=".advancetool.service.AddressService"/>
+        <service android:name=".communicationguard.service.CallSafaService"/>
     </application>
 </manifest>

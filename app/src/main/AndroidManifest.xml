@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="ningbaoqi.com.mobileguardianapp">
+
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -63,5 +64,7 @@
         <service android:name=".losefind.service.LocationService"/>
         <service android:name=".advancetool.service.AddressService"/>
         <service android:name=".communicationguard.service.CallSafaService"/>
+
+        <activity android:name=".softwaremanager.actviity.AppManagerActivity"/>
     </application>
 </manifest>

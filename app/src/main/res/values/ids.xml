@@ -11,4 +11,8 @@
     <item name="phone_interrupt" type="id"/>
     <item name="sms_interrupt" type="id"/>
     <item name="cancel" type="id"/>
+    <item name="iv_icon" type="id"/>
+    <item name="tv_name" type="id"/>
+    <item name="tv_location" type="id"/>
+    <item name="tv_app_size" type="id"/>
 </resources>

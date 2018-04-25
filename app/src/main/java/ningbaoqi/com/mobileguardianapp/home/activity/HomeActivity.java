@@ -24,6 +24,7 @@ import ningbaoqi.com.mobileguardianapp.advancetool.activity.AdvanceToolsActivity
 import ningbaoqi.com.mobileguardianapp.communicationguard.activity.ComminicationGuardActivity;
 import ningbaoqi.com.mobileguardianapp.losefind.activity.LosedFindActivity;
 import ningbaoqi.com.mobileguardianapp.settings.activity.SettingsActivity;
+import ningbaoqi.com.mobileguardianapp.softwaremanager.actviity.AppManagerActivity;
 import ningbaoqi.com.mobileguardianapp.utils.MD5Utils;
 import ningbaoqi.com.mobileguardianapp.utils.SharedPreferenceItemConfig;
 
@@ -35,6 +36,7 @@ import ningbaoqi.com.mobileguardianapp.utils.SharedPreferenceItemConfig;
 public class HomeActivity extends AppCompatActivity {
     private static final int PHONE_PREVENT_STEAL = 0;
     private static final int COMMUNICATION_GUARD = 1;
+    private static final int SOFTWARE_MANAGE = 2;
     private static final int ADVANCE_TOOLS = 7;
     private static final int SETTING_CENTER = 8;
     private SharedPreferences sharedPreferences;
@@ -64,7 +66,10 @@ public class HomeActivity extends AppCompatActivity {
                         showPassworDialog();
                         break;
                     case COMMUNICATION_GUARD:
-                        startActivity(new Intent(HomeActivity.this , ComminicationGuardActivity.class));
+                        startActivity(new Intent(HomeActivity.this, ComminicationGuardActivity.class));
+                        break;
+                    case SOFTWARE_MANAGE:
+                        startActivity(new Intent(HomeActivity.this, AppManagerActivity.class));
                         break;
                     case ADVANCE_TOOLS:
                         startActivity(new Intent(HomeActivity.this, AdvanceToolsActivity.class));
@@ -91,7 +96,7 @@ public class HomeActivity extends AppCompatActivity {
     private void showPasswordInputDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final AlertDialog dialog = builder.create();
-        View view = View.inflate(this , R.layout.dialog_input_password , null);
+        View view = View.inflate(this, R.layout.dialog_input_password, null);
         dialog.setView(view);
         Button btn_OK = view.findViewById(R.id.yes);
         Button btn_CANCEL = view.findViewById(R.id.cancel);
@@ -100,12 +105,12 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String inputPassword = etPassword.getText().toString();
-                String savedPassword = sharedPreferences.getString(SharedPreferenceItemConfig.SharedPreferencePassword , null);
+                String savedPassword = sharedPreferences.getString(SharedPreferenceItemConfig.SharedPreferencePassword, null);
                 if (!TextUtils.isEmpty(inputPassword) && MD5Utils.encode(inputPassword).equals(savedPassword)) {
                     dialog.dismiss();
                     startActivity(new Intent(HomeActivity.this, LosedFindActivity.class));
                 } else {
-                    Toast.makeText(HomeActivity.this , "输入密码错误" , Toast.LENGTH_LONG).show();
+                    Toast.makeText(HomeActivity.this, "输入密码错误", Toast.LENGTH_LONG).show();
                     etPassword.setText("");
                 }
             }
@@ -122,7 +127,7 @@ public class HomeActivity extends AppCompatActivity {
     private void showPasswordSetDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final AlertDialog dialog = builder.create();
-        View view = View.inflate(this , R.layout.dialog_set_password , null);
+        View view = View.inflate(this, R.layout.dialog_set_password, null);
         dialog.setView(view);
         //dialog.setView(view , 0 , 0 , 0 , 0 );//兼容2.3以下的版本
         Button btn_OK = view.findViewById(R.id.yes);
@@ -139,7 +144,7 @@ public class HomeActivity extends AppCompatActivity {
                     dialog.dismiss();
                     startActivity(new Intent(HomeActivity.this, LosedFindActivity.class));
                 } else {
-                    Toast.makeText(HomeActivity.this , "输入的密码不正确" , Toast.LENGTH_LONG).show();
+                    Toast.makeText(HomeActivity.this, "输入的密码不正确", Toast.LENGTH_LONG).show();
                 }
             }
         });

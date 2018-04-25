@@ -87,4 +87,13 @@
     <string name="black_number_off">黑名单更新已关闭</string>
     <string name="black_number_on">黑名单更新已开启</string>
     <string name="black_number">黑名单设置</string>
+    <string name="my_software">我的软件</string>
+    <string name="ram_enable">内存可用:</string>
+    <string name="sdcard_enable">SD卡可用：</string>
+    <string name="application_name">应用名字</string>
+    <string name="application_location">安装位置</string>
+    <string name="size">尺寸</string>
+    <string name="phone_rom">手机内存</string>
+    <string name="user_application">用户程序</string>
+    <string name="system_application">系统程序</string>
 </resources>

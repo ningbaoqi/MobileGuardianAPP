@@ -15,4 +15,9 @@
     <item name="tv_name" type="id"/>
     <item name="tv_location" type="id"/>
     <item name="tv_app_size" type="id"/>
+    <item name="tv_app" type="id" />
+    <item name="ll_uninstall" type="id" />
+    <item name="ll_running" type="id" />
+    <item name="ll_share" type="id" />
+    <item name="ll_details" type="id" />
 </resources>

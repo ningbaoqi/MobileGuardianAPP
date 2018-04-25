@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <TextView
         style="@style/TitleStyle"
-        android:text="@string/my_software"
-        />
+        android:text="@string/my_software" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/tv_rom"
@@ -24,7 +20,7 @@
             android:layout_weight="1"
             android:text="@string/ram_enable"
             android:textColor="@color/black"
-            android:textSize="@dimen/splash_app_version_size"/>
+            android:textSize="@dimen/splash_app_version_size" />
 
         <TextView
             android:id="@+id/tv_sdcard"
@@ -33,10 +29,25 @@
             android:layout_weight="1"
             android:text="@string/sdcard_enable"
             android:textColor="@color/black"
-            android:textSize="@dimen/splash_app_version_size"/>
+            android:textSize="@dimen/splash_app_version_size" />
     </LinearLayout>
 
-    <include
-        android:id="@+id/list_view"
-        layout="@layout/list_view"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@id/tv_app"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:text="@string/user_application"
+            android:textColor="@color/black" />
+
+        <include
+            android:id="@+id/list_view"
+            layout="@layout/list_view" />
+
+    </FrameLayout>
+
 </LinearLayout>

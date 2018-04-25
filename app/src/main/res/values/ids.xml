@@ -5,4 +5,10 @@
     <item name="ll_progress_bar" type="id" />
     <item name="et_page_number" type="id" />
     <item name="tv_page_number" type="id" />
+    <item name="delete" type="id"/>
+    <item name="et_phone_number" type="id"/>
+    <item name="comfirm" type="id"/>
+    <item name="phone_interrupt" type="id"/>
+    <item name="sms_interrupt" type="id"/>
+    <item name="cancel" type="id"/>
 </resources>

@@ -161,4 +161,25 @@ public class BlackNumber {
         db.close();
         return count;
     }
+
+    /**
+     * 实现分批加载数据
+     * @param startIndex    开始的位置
+     * @param maxCount     每一页展示的最大的条目
+     * @return
+     */
+    public List<BlackNumberInfo> findPar2(int startIndex, int maxCount) {
+        SQLiteDatabase db = openHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select number , mode from blacknumber limit ? offset ?", new String[]{String.valueOf(maxCount), String.valueOf(startIndex)});
+        ArrayList<BlackNumberInfo> blackNumberInfos = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            BlackNumberInfo info = new BlackNumberInfo();
+            info.setMode(cursor.getString(1));
+            info.setNumber(cursor.getString(0));
+            blackNumberInfos.add(info);
+        }
+        cursor.close();
+        db.close();
+        return blackNumberInfos;
+    }
 }

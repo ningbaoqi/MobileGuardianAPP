@@ -25,6 +25,7 @@
         android:textSize="@dimen/splash_app_version_size" />
 
     <ImageView
+        android:id="@id/delete"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_alignParentRight="true"

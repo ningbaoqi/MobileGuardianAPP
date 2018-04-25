@@ -81,4 +81,7 @@
     <string name="previous_page">上一页</string>
     <string name="next_page">下一页</string>
     <string name="jump_to_page">跳转到哪一页</string>
+    <string name="add">添加</string>
+    <string name="add_black_number">添加黑名单</string>
+    <string name="please_input_black_number">请输入黑名单</string>
 </resources>

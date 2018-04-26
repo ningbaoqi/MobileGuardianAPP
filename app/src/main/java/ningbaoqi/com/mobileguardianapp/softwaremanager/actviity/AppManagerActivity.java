@@ -297,4 +297,28 @@ public class AppManagerActivity extends AppCompatActivity implements View.OnClic
         super.onDestroy();
         popwindowDismiss();
     }
+
+    /**
+     * 通过反射，需要将aidl文件拷贝过来
+     * */
+//    private void endCall(){
+//        try {
+//            //通过类加载器加载ServiceManager
+//            Class<?> clazz = getClassLoader().loadClass("android.os.ServiceManager");
+//            //通过反射得到当前的方法
+//            Method method = clazz.getDeclaredMethod("getService", String.class);
+//            IBinder iBinder = (IBinder) method.invoke(null, TELEPHONY_SERVICE);
+//            ITelephony iTelephont = ITelephony.Stub.asInterface(iBinder);
+//            iTelephont.endCall();
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (NoSuchMethodException e) {
+//            e.printStackTrace();
+//        } catch (InvocationTargetException e) {
+//            e.printStackTrace();
+//        } catch (IllegalAccessException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 }
